@@ -1,0 +1,890 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600&family=Ubuntu:wght@300;500;700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.max-width {
+    max-width: 1300px;
+    padding: 0 80px;
+    margin: auto;
+}
+/* navbar ko`rinishi */
+
+.navbar {
+    position: fixed;
+    width: 100%;
+    padding: 30px 0;
+    z-index: 999;
+    /* background: crimson; */
+    font-family: "Ubuntu", sans-serif;
+    transition: all 0.3s ease;
+}
+
+.navbar.sticky {
+    padding: 15px 0;
+    background: crimson;
+}
+
+.navbar .max-width {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .logo a {
+    color: #fff;
+    font-size: 35px;
+    font-weight: 600;
+}
+
+.navbar .logo a span {
+    color: crimson;
+}
+
+.navbar.sticky .logo a span {
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+.navbar .menu li {
+    list-style: none;
+    display: inline-block;
+}
+
+.navbar .menu li a {
+    display: block;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 25px;
+    transition: color 0.3s ease;
+}
+
+.navbar .menu li a:hover {
+    color: crimson;
+}
+
+.navbar.sticky .menu li a:hover {
+    color: #fff;
+    transition: all 0.3s ease;
+}
+/* menu-btn korinishi */
+
+.menu-btn {
+    color: #fff;
+    font-size: 23px;
+    cursor: pointer;
+    display: none;
+}
+/* home section kurinishi */
+
+.home {
+    display: flex;
+    background-image: url("./rasm/banner.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    color: #fff;
+    min-height: 500px;
+    font-family: "Ubuntu", sans-serif;
+}
+
+.home .max-width {
+    margin: auto 0 auto 40px;
+}
+
+.home .text-content .text-1 {
+    font-size: 27px;
+}
+
+.home .text-content .text-2 {
+    font-size: 75px;
+    font-weight: 600;
+    margin-left: -3px;
+}
+
+.home .text-content .text-3 {
+    font-size: 40px;
+    margin: 5px 0;
+}
+
+.home .text-content .text-3 span {
+    color: crimson;
+}
+
+.home .text-content a {
+    display: inline-block;
+    background: crimson;
+    color: #fff;
+    font-size: 25px;
+    padding: 12px 3px;
+    border-radius: 5px;
+    border: 2px solid crimson;
+    transition: all 0.3s ease;
+}
+
+.home .text-content a:hover {
+    background: #0004;
+    color: crimson;
+}
+
+/* soat */
+.home .body{
+    position: relative;
+    float: right;
+    width:40%;
+    height: 100%;
+    margin: 0;
+    /* background: #333; */
+    
+    font-family: "Ubuntu", sans-serif;
+}
+.home .body .time-counter{
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%,-50%) ;
+display: flex;
+justify-content:center;
+align-items: center;
+z-index: 1;
+
+}
+
+.home .body .time-counter div{
+    margin-right: 1rem;
+}
+.home .body .time-counter div:last-child{
+margin-right: 0;
+}
+
+
+
+.home .body .time-counter .box .label{
+color: #fff;
+text-transform: lowercase;
+text-align: center;
+margin-bottom: .5rem;
+font-weight: 900;
+
+}
+.home .body h2{
+    position: absolute;
+   left: 33%;
+   top: 20%;
+   text-transform: uppercase;
+   font-size: 2em;
+   z-index: 1;
+}
+.home .body .time-counter div{
+width: 70px;
+height: 70px;
+background: linear-gradient(180deg, rgba(184, 3, 39, 0.685) 0%,rgb(218, 22, 61) 100%);
+border-radius: 15px;
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 3em;
+font-weight: bold;
+
+}
+.home .body .time-counter div:last-child{
+    box-shadow: 0 5px 15px rgba(38, 39, 39, 0.45);
+    background: linear-gradient(180deg, rgba(14, 0, 3, 0.685) 0%,#444 100%);
+}
+
+.home .body .time-counter #days::before{
+    content: "Kun";
+    position: absolute;
+    top: -30px;
+  
+    width: 20%;
+    height: 30px;
+    text-align: center;
+    color: #fff;
+   
+   font-weight: blod;
+    line-height: 35px;
+    font-size: 0.35em;
+
+}
+.home .body .time-counter #hours::before{
+    content: "Soat";
+    position: absolute;
+    top: -30px;
+   
+    width: 20%;
+    height: 30px;
+    text-align: center;
+    color: #fff;
+   
+   font-weight: blod;
+    line-height: 35px;
+    font-size: 0.35em;
+
+}
+.home .body .time-counter #minutes::before{
+    content: "Minut";
+    position: absolute;
+    top: -30px;
+    
+    width: 20%;
+    height: 30px;
+    text-align: center;
+    color: #fff;
+   
+   font-weight: blod;
+    line-height: 35px;
+    font-size: 0.35em;
+
+}
+.home .body .time-counter #seconds::before{
+    content: "Secund";
+    position: absolute;
+    top: -30px;
+    
+    width: 20%;
+    height: 30px;
+    text-align: center;
+    color: #fff;
+   
+   font-weight: blod;
+    line-height: 35px;
+    font-size: 0.35em;
+
+}
+
+.home .body .postion-absalute{
+position: absolute;
+
+}
+.home .body .feriwork-1{
+    top: 0;
+    left: -5%;
+    width:40%;
+    height: 40%;
+
+}
+.home .body .feriwork-2{
+    top: -10%;
+    right: -8%;
+    width:45%;
+    height: 45%;
+
+}
+.home .body .feriwork-3{
+    bottom:10%;
+    right: 50%;
+    width:45%;
+    height: 45%;
+
+}
+.home .body .feriwork-4{
+    bottom:10%;
+    right: -10%;
+    width:45%;
+    height: 45%;
+
+}
+.home .body .feriwork:nth-child(1){
+    top: 0;
+    left: 20% ;
+    height: 100%;
+}
+.home .body .feriwork:nth-child(2){
+    top: 50%;
+    right:  20% ;
+    width: 40%;
+    height: 40%;
+}
+.home .body .feriwork:nth-child(3){
+    top: 100%;
+    left:  0% ;
+    width: 50%;
+    height: 50%;
+}
+.home .body #new-year-text img{
+margin-top: 40%;
+margin-right: 30px;
+}
+/* barchasi uchun */
+
+section {
+    padding: 100px 0;
+}
+
+.about,
+.services,
+.skills,
+.teams,
+.contact,
+footer {
+    font-family: "Poppins", sans-serif;
+}
+
+.about .about-content,
+.services .serv-content,
+.skills .skills-content,
+.contact .contact-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.about .about-content ul{
+    list-style: none;
+    margin: 5px 0px;
+}
+
+section .title {
+    position: relative;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+    font-family: "Ubuntu", sans-serif;
+}
+
+section .title::before {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    width: 300px;
+    height: 3px;
+    background: #111;
+    transform: translateX(-50%);
+}
+
+section .title::after {
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    padding: 5px;
+    font-size: 20px;
+    color: crimson;
+    background: #fff;
+    transform: translateX(-50%);
+}
+/* malumot qismini boshlash */
+
+.about .title::after {
+    content: "Bizning maqsadlar";
+}
+
+.about .about-content .left {
+    width: fit-content;
+}
+
+.about .about-content .left img {
+    height: 400px;
+    width: 500px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.about .about-content .right {
+    width: 55%;
+}
+
+.about .about-content .right .text {
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.about .about-content .right .text span {
+    color: crimson;
+}
+
+.about .about-content .right p {
+    text-align: justify;
+}
+
+.about .about-content .right a {
+    display: inline-block;
+    background: crimson;
+    color: #fff;
+    font-size: 20px;
+    padding: 10px 30px;
+    border-radius: 5px;
+    font-weight: 500;
+    border: 2px solid crimson;
+    transition: all 0.3s ease;
+}
+
+.about .about-content a:hover {
+    background: none;
+    color: crimson;
+}
+/* xizmatlar bolimini boshlash */
+
+.services,
+.teams {
+    background: #111;
+    color: #fff;
+}
+
+.services .title::before,
+.teams .title::before {
+    background: #fff;
+}
+
+.services .title::after {
+    content: "Biz o'rgatamiz";
+    background: #111;
+}
+.services .serv-content{
+    vertical-align: text-top;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.services .serv-content .card {
+    background: #222;
+    width: calc(25% - 20px);
+    text-align: center;
+    height: 280px;
+    padding: 30xp 35px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+
+.services .serv-content .card:hover {
+    background: crimson;
+}
+
+.services .serv-content .card .box {
+    transition: all 0.3s ease;
+}
+
+.services .serv-content .card:hover .box {
+    transform: scale(1.03);
+}
+
+.services .serv-content .card i {
+    font-size: 40px;
+    padding-top: 5px;
+    color: crimson;
+    transition: color 0.3s ease;
+}
+
+.services .serv-content .card:hover i {
+    color: #fff;
+}
+
+.services .serv-content .card .text {
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px 0 7px 0;
+}
+/* konikmalar qismini boshlash */
+
+.skills .title::after {
+    content: "biz nima qilib beramiz";
+}
+
+.skills .skills-content .column {
+    width: calc(50% - 30px);
+}
+
+.skills .skills-content .left .text {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.skills .skills-content .left p {
+    text-align: justify;
+}
+
+.skills .skills-content .left a {
+    display: inline-block;
+    background: crimson;
+    color: #fff;
+    font-size: 18px;
+    padding: 8px 18px;
+    border-radius: 5px;
+    font-weight: 500;
+    border: 2px solid crimson;
+    transition: all 0.3s ease;
+}
+
+.skills .skills-content .left a:hover {
+    background: none;
+    color: crimson;
+}
+
+.skills .skills-content .right .bars {
+    margin-bottom: 15px;
+}
+
+.skills .skills-content .right .info {
+    display: flex;
+    margin-bottom: 5px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.skills .skills-content .right span {
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.skills .skills-content .right .line {
+    height: 5px;
+    width: 100%;
+    background: lightgray;
+    position: relative;
+}
+
+.skills .skills-content .right .line::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background: crimson;
+}
+
+.skills-content .right .html::before {
+    width: 100%;
+}
+
+.skills-content .right .css::before {
+    width: 80%;
+}
+
+.skills-content .right .js::before {
+    width: 10%;
+}
+
+.skills-content .right .java::before {
+    width: 20%;
+}
+
+.skills-content .right .mysql::before {
+    width: 70%;
+}
+/* guruh qismini boshlash */
+
+.teams .title::after {
+    content: "bitirganlar";
+    background: #111;
+}
+
+.teams .carousel .card {
+    background: #222;
+    border-radius: 6px;
+    padding: 25px 35px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.teams .carousel .card:hover {
+    background: crimson;
+}
+
+.teams .carousel .card .box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.teams .carousel .card:hover .box {
+    transform: scale(1.05);
+}
+
+.teams .carousel .card .text {
+    font-size: 25px;
+    font-weight: 600;
+    margin: 10px 0 7px 0;
+}
+
+.teams .carousel .card img {
+    height: 150px;
+    width: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid crimson;
+    transition: all 0.3s ease;
+}
+
+.teams .carousel .card:hover img {
+    border-color: white;
+}
+
+.owl-dots {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.owl-dot {
+    height: 13px;
+    width: 13px;
+    margin: 0 5px;
+    outline: none !important;
+    border-radius: 50%;
+    border: solid 2px crimson !important;
+    transition: all 0.3s ease;
+}
+
+.owl-dot.active {
+    width: 35px;
+    border-radius: 14px;
+}
+
+.owl-dot.active,
+.owl-dot:hover {
+    background: crimson !important;
+}
+/* boglaniw qismi */
+
+.contact .title::after {
+    content: "bog'lanish uchun";
+}
+
+.contact .contact-content .column {
+    width: calc(50% - 30px);
+}
+
+.contact .contact-content .text {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.contact .contact-content .left p {
+    text-align: justify;
+}
+
+.contact .contact-content .left .icons {
+    margin: 10px 0;
+}
+
+.contact .contact-content .row {
+    display: flex;
+    height: 65px;
+    align-items: center;
+}
+
+.contact .contact-content .row .info {
+    margin-left: 30px;
+}
+
+.contact .contact-content .row i {
+    font-size: 25px;
+    color: crimson;
+}
+
+.contact .contact-content .info .head {
+    font-weight: 600;
+}
+
+.contact .contact-content .info .sub-title {
+    color: #333;
+}
+
+.contact .right form .fields {
+    display: flex;
+}
+
+.contact .right form .field,
+.contact .right form .fields .field {
+    height: 45px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.contact .right form .textarea {
+    height: 80px;
+}
+
+.contact .right form .name {
+    margin-right: 10px;
+}
+
+.contact .right form .email {
+    margin-left: 10px;
+}
+
+.contact .right form .field input,
+.contact .right form .textarea textarea {
+    height: 100%;
+    width: 100%;
+    border: 1px solid lightgray;
+    border-radius: 6px;
+    outline: none;
+    padding: 0 15px;
+    font-size: 17px;
+    font-family: "Poppins", sans-serif;
+}
+
+.contact .right form .textarea textarea {
+    padding-top: 10px;
+    resize: none;
+}
+
+.contact .right form .button {
+    height: 47px;
+    width: 174px;
+}
+
+.contact .right form .button button {
+    width: 100%;
+    height: 100%;
+    border: 2px solid crimson;
+    background: crimson;
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.contact .right form .button button:hover {
+    color: crimson;
+    background: none;
+}
+/*tag qisim*/
+
+footer {
+    background: #111;
+    padding: 20px 23px;
+    color: #fff;
+}
+
+footer span a {
+    color: crimson;
+    text-decoration: none;
+}
+
+footer span a:hover {
+    text-decoration: underline;
+    transition: all 0.3s ease;
+}
+/* media queryni boshlash */
+
+@media (max-width: 1300px) {
+    .home .max-width {
+        margin-left: 0px;
+    }
+}
+
+@media (max-width: 1104px) {
+    .about .about-content .left img {
+        height: 350px;
+        width: 400px;
+    }
+}
+
+@media (max-width: 991px) {
+    .max-width {
+        padding: 0 40px;
+    }
+}
+
+@media (max-width: 947px) {
+    .menu-btn {
+        display: block;
+        z-index: 999;
+    }
+    .menu-btn i.active::before {
+        content: "\f00d";
+    }
+    .navbar .menu {
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        left: -100%;
+        top: 0;
+        background: #111;
+        text-align: center;
+        padding-top: 70px;
+        transition: all 0.3s ease;
+    }
+    .navbar .menu.active {
+        left: 0;
+    }
+    .navbar .menu li {
+        display: block;
+    }
+    .navbar .menu li a {
+        display: inline-block;
+        font-size: 20px;
+        margin: 20px 0;
+    }
+    .max-width {
+        max-width: 800px;
+    }
+    .about .about-content .column {
+        width: 100%;
+    }
+    .about .about-content .left {
+        display: flex;
+        justify-content: center;
+        margin: 0 auto 60px;
+    }
+    .about .about-content .right {
+        flex: 100%;
+    }
+    .services .serv-content .card {
+        width: calc(50% - 10px);
+        margin-bottom: 20px;
+    }
+    .skills .skills-content .column,
+    .contact .contact-content .column {
+        width: 100%;
+        margin-bottom: 35px;
+    }
+}
+
+@media (max-width: 690px) {
+    
+    .max-width {
+        padding: 0 23px;
+    }
+    .home .text-content .text-2 {
+        font-size: 60px;
+    }
+    .home .text-content .text-3 {
+        font-size: 30px;
+    }
+    .home .text-content a {
+        font-size: 20px;
+    }
+    .services .serv-content .card {
+        width: 100%;
+    }
+}
+
+@media (max-width: 500px) {
+    .home .text-content .text-2 {
+        font-size: 50px;
+    }
+    .home .text-content .text-3 {
+        font-size: 25px;
+    }
+}
+
+
+.text1{
+    word-spacing: 10px;
+    margin-top: 7px;
+}
+
